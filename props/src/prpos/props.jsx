@@ -13,12 +13,13 @@ function Props() {
     }
 
 
-    let obj ={
-        name:"manthan",
-        surname:"patel",
-        rollNo:33
+    let obj = {
+      title:"abcd",
+      price:200,
+      rate:1.2
     }
 
+    let arr = [1,2,3,4,5]
   return (
     <>
 
@@ -26,8 +27,12 @@ function Props() {
       <button>{count}</button>
       <button onClick={()=> setNum(-1)}>-</button>
 
-
-      <Child props={obj}/>
+      <hr />
+      <br />
+      <hr />
+      <hr />
+      <hr />
+      <Child item = {obj} list = {arr}/>
     </>
   )
 }
