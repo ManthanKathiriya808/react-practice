@@ -6,7 +6,8 @@ import { useState } from "react"
 
 const FetchApi = (currency)=>{
 
-    const [data, setData] = useState({})
+    const [data, setData] = useState([])
+
     const api=()=>{
         fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`)
         .then((res) => res.json())
@@ -15,10 +16,10 @@ const FetchApi = (currency)=>{
     useEffect(() => {
        
            api()
-        },[])
+        }, [currency])
 
-// console.log(data)
-    return {data};
+        return {data};
+        // console.log(data)
 }
 
 export default FetchApi
